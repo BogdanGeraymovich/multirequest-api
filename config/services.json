@@ -1,0 +1,28 @@
+{
+  "services": {
+    "userController": {
+      "class": "../src/controller/user.controller",
+      "arguments": ["@userService"]
+    },
+    "customerController": {
+      "class": "../src/controller/customer.controller",
+      "arguments": ["@userService"]
+    },
+    "countryController": {
+      "class": "../src/controller/country.controller",
+      "arguments": ["@userService"]
+    },
+    "userService": {
+      "class": "../src/services/user.service",
+      "arguments": []
+    },
+    "customerService": {
+      "class": "../src/services/customer.service",
+      "arguments": []
+    },
+    "countryService": {
+      "class": "../src/services/country.service",
+      "arguments": []
+    }
+  }
+}
