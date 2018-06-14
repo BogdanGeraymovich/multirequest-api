@@ -1,0 +1,1 @@
+## Example of usage for module [multi-request](https://github.com/BogdanGeraymovich/multi-request)
