@@ -9,13 +9,23 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+const initServiceContainer = () => {
+  let container = new ContainerBuilder();
+  let loader = new JsonFileLoader(container);
+  loader.load(`${process.cwd()}/config/services`);
+
+  return container;
+};
+
+const loadRoutes = (container) => {
+  const routesLoader = new RoutesLoader(app, container);
+  return routesLoader.load();
+};
+
 const init = async () => {
   try {
-    let container = new ContainerBuilder();
-    let loader = new JsonFileLoader(container);
-    loader.load(`${process.cwd()}/config/services`);
-    const routesLoader = new RoutesLoader(app, container);
-    await routesLoader.load();
+    const container = initServiceContainer();
+    await loadRoutes(container);
 
     app.listen(config.port, () => {
       console.log(`App started at ${config.port}`);

@@ -18,7 +18,7 @@
     "lodash": "^4.17.10",
     "mongoose": "^5.1.5",
     "mongoose-fixture-loader": "^1.0.2",
-    "multi-request-json": "^1.0.1",
+    "multi-request-json": "^1.0.4",
     "node-dependency-injection": "^2.1.0",
     "nodemon": "^1.17.5"
   },
