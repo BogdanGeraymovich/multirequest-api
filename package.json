@@ -18,10 +18,9 @@
     "lodash": "^4.17.10",
     "mongoose": "^5.1.5",
     "mongoose-fixture-loader": "^1.0.2",
-    "multi-request": "git+ssh://git@github.com/BogdanGeraymovich/multi-request.git",
+    "multi-request-json": "^1.0.1",
     "node-dependency-injection": "^2.1.0",
-    "nodemon": "^1.17.5",
-    "request": "^2.87.0"
+    "nodemon": "^1.17.5"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

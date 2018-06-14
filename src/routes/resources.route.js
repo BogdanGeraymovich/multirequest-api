@@ -1,6 +1,6 @@
 import BaseRoute from '../utils/BaseRoute';
 import config from '../../config';
-import multirequest from 'multi-request';
+import multirequest from 'multi-request-json';
 
 export default class UserRoute extends BaseRoute {
   constructor(container) {
